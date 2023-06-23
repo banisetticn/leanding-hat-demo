@@ -3,7 +3,7 @@ import { baseURL } from './baseUrl';
 
 export async function getLabels() {
   try {
-    const req = await fetch(`${baseURL}/global`);
+    const req = await fetch(`${baseURL}/global`, { next: { revalidate: 60 } });
     return req.json();
   } catch (error) {
     if (error instanceof SyntaxError) {
@@ -20,6 +20,7 @@ export async function getPages(requestBody: IObject) {
     const req = await fetch(`${baseURL}/pages`, {
       method: 'post',
       body: JSON.stringify(requestBody),
+      next: { revalidate: 60 },
     });
     return req.json();
   } catch (error) {
@@ -37,6 +38,7 @@ export async function getBlogPosts(requestBody: IObject) {
     const req = await fetch(`${baseURL}/blogs`, {
       method: 'post',
       body: JSON.stringify(requestBody),
+      next: { revalidate: 60 },
     });
     return req.json();
   } catch (error) {
@@ -53,6 +55,7 @@ export async function getBlogPostsDetails(requestBody: IObject) {
     const req = await fetch(`${baseURL}/blog_details`, {
       method: 'post',
       body: JSON.stringify(requestBody),
+      next: { revalidate: 60 },
     });
     return req.json();
   } catch (error) {
