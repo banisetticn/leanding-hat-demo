@@ -1,0 +1,98 @@
+.lh{
+     /*----==lh contact form section==----*/
+    &_contact{
+        &_form{
+            &_section{
+                @apply pt-[65px] pb-[90px];
+
+                &__heading{
+                    @apply w-full text-center mb-[60px];
+                }
+
+                .lh_contact_form_section_title{
+                    @apply text-[30px] leading-normal lg:text-[50px] lg:leading-[75px] pb-[12px] text-lh-black font-medium;
+                }
+
+                .lh_contact_form_para{
+                    @apply text-[20px] leading-[30px] text-lh-black-light-400 font-normal;
+                    br{
+                        @apply hidden lg:block;
+                    }
+                }
+            }
+            @apply w-full bg-lh-white rounded-[26px] py-[20px] px-[15px] lg:py-[60px] lg:px-[76px] text-center;
+
+            .lh_form_title{
+                @apply text-[26px] leading-[39px] text-lh-black font-normal pb-[14px];
+            }
+
+            .form_group{
+                @apply flex gap-x-[30px] gap-y-[35px];
+
+                .form_submit_btn_area{
+                    @apply flex items-center flex-wrap gap-y-[40px] justify-between;
+                }
+
+                .form_captcha_btn{
+                    @apply w-full sm:w-[348px] h-[88px] flex items-center rounded-[3px] px-[13px] py-[10px] border border-solid border-lh-black-450 bg-lh-black-light-300;
+
+                    p{
+                        @apply font-medium text-lh-black;
+                    }
+                }
+
+                .captcha_btn{
+                    @apply w-[28px] h-[28px] border-8 mr-[8px] border-lh-black-450 rounded-[5px] cursor-pointer;
+                }
+
+                .captcha_icon{
+                    @apply w-auto h-[65px] ml-auto;
+                }
+                .form_submit{
+                    @apply w-full justify-center sm:justify-start sm:w-auto h-[60px];
+                }
+            }
+        }
+    }
+    
+   /*----==lh branch section==----*/
+    &_branch{
+        &_section{
+            @apply w-full pt-[90px];
+
+            &__heading{
+                @apply pb-[65px];
+            }
+            .lh_branch_section_title{
+                @apply text-[30px] leading-normal pb-[10px] lg:pb-0 lg:text-[40px] lg:leading-[75px] text-lh-black text-center font-medium;
+            }
+            .lh_branch_section_para{
+                @apply text-[16px] leading-[24px] font-normal text-center text-lh-black-light-400;
+            }
+        }
+
+        &_bg{
+            @apply w-full lg:w-[943px] h-auto object-cover mx-auto;
+        }
+    }
+
+    /*----==lh location section==----*/
+    &_location{
+        @apply w-full pt-[90px] pb-[90px] lg:pt-[152px] lg:pb-[109px];
+        .container{
+            @apply flex flex-wrap items-center gap-x-[74px] lg:flex-nowrap;
+        }
+
+        &__img{
+            @apply w-full lg:w-auto object-cover mb-[35px] lg:mb-0;
+
+            img{
+                @apply w-full lg:w-auto object-cover;
+            }
+        }
+
+        &__title{
+            @apply text-[26px] leading-[39px] font-medium text-lh-black pb-[27px];
+        }
+    }
+}

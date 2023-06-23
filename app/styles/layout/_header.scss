@@ -1,0 +1,55 @@
+@use '../base';
+
+.lh-c-header {
+	.container {
+		@apply py-[29px] z-[9999];
+	}
+
+	.lh-c-header__row {
+		@apply flex w-full justify-between items-center;
+		.lh-c-logo {
+			@apply w-2/4 lg:w-2/12 z-10;
+		}
+
+		#hamburger_menu {
+			@apply w-[35px] h-auto cursor-pointer z-40 block lg:hidden;
+
+			.bar {
+				transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 2);
+				@apply h-[5px] w-full block bg-lh-blue-dark rounded-[5px] mt-[5px] first:mt-[0];
+
+				& #bar1 {
+					@apply translate-y-[-4px];
+				}
+
+				& #bar2 {
+					@apply translate-y-[4px];
+				}
+			}
+
+			&.icon {
+				.bar {
+					@apply bg-lh-white;
+				}
+
+				#bar1 {
+					@apply translate-y-[9px] rotate-[-45deg];
+				}
+				#bar2 {
+					@apply opacity-0;
+				}
+				#bar3 {
+					@apply translate-y-[-11px] rotate-[45deg];
+				}
+			}
+		}
+
+		.desktop_cta {
+			@apply hidden lg:block;
+		}
+
+		.active_menu {
+			@apply translate-x-[0];
+		}
+	}
+}

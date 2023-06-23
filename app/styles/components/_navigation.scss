@@ -1,0 +1,64 @@
+/*----====header nav====----*/
+.lh {
+	&-c {
+		&-nav {
+			@apply w-full lg:w-fit absolute h-full flex items-center justify-center flex-col left-0 top-0 lg:flex-row lg:relative overflow-x-hidden lg:overflow-visible;
+
+			&__list {
+				@apply w-full h-full list-none flex items-center justify-center gap-y-[50px] flex-col  translate-x-[200%] lg:translate-x-[0] lg:justify-start lg:w-auto lg:h-auto lg:gap-y-0 bg-lh-blue-800 lg:bg-lh-white lg:flex-row relative z-20 transition duration-300 ease-in-out;
+
+				.lh-c-nav_item {
+					@apply w-full flex items-center gap-x-[8px] flex-col mr-0 lg:mr-[30px] lg:w-fit lg:flex-row relative;
+
+					&:nth-child(5) {
+						@apply mr-0;
+					}
+
+					&__inner_list {
+						@apply relative opacity-0 h-0 ml-[100px] lg:ml-0 lg:absolute top-[20px] shadow-lh-header-menu-dropdown w-[211px] lg:h-[204px] bg-lh-white rounded-[10px] flex flex-col justify-start gap-y-[25px] lg:opacity-0;
+						box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.12);
+
+						.lh-c-nav_item__inner_item {
+							@apply transition duration-300 ease-in-out;
+							a {
+								@apply text-[15px] font-normal text-lh-header-link transition duration-300 ease-in-out;
+
+								&:hover {
+									@apply text-lh-blue-700;
+								}
+							}
+						}
+					}
+
+					&:hover .lh-c-nav_item__inner_list {
+						@apply opacity-100 h-auto px-[20px] py-[20px] lg:py-[27px] lg:pl-[21px] lg:pr-[91px] lg:h-[204px];
+					}
+
+					.lh-c-nav_link {
+						@apply text-[20px] text-lh-white lg:text-lh-black-500 lg:text-[14px] leading-[21px] font-normal hover:text-lh-blue-700 transition-all ease-in-out delay-0;
+					}
+
+					& picture {
+						@apply absolute right-[33%] sm:right-[40%] top-[10px] lg:relative lg:right-0 lg:top-0;
+					}
+				}
+
+				.lh-c-cta {
+					@apply block lg:hidden flex flex-col;
+
+					.lh-u-btn--simple {
+						@apply text-lh-white text-center text-[20px] mb-[30px];
+					}
+
+					.lh-u-btn--solid--icon {
+						@apply text-[15px] px-[21px] py-[14px];
+					}
+				}
+
+				.mob_cta {
+					@apply flex flex-col w-auto lg:invisible lg:w-0 lg:h-0;
+				}
+			}
+		}
+	}
+}

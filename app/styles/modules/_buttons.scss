@@ -1,0 +1,64 @@
+.lh {
+	&-u {
+		&-btn {
+			@apply px-5 py-3.5 inline-block transition-all ease-in-out delay-0 text-[15px] leading-5 hover:text-lh-blue-700;
+			&--rounded {
+				@apply rounded-full;
+			}
+			&--solid {
+				@apply bg-lh-blue-700 text-lh-white transition ease-in-out delay-0 hover:shadow-lh-blue-700/80 hover:shadow-md hover:duration-500 hover:text-lh-white text-[15px];
+			}
+		}
+	}
+}
+
+/*-- global fill blue button --*/
+.lh {
+	&_btn {
+		&_active {
+			@apply w-fit rounded-[50px] bg-lh-blue-700 px-[36px] py-[18px] leading-[24px] flex items-center gap-x-[9px] text-lh-white font-bold text-[16px] ease-in duration-300 hover:gap-x-[20px];
+
+			& svg {
+				@apply fill-lh-white ease-in duration-300;
+			}
+		}
+	}
+}
+/*-- global outline button --*/
+.lh {
+	&_outline {
+		&_btn {
+			@apply rounded-[50px] bg-none border border-lh-blue-700 text-lh-blue-700 px-[36px] py-[18px] flex items-center gap-x-[9px] font-bold text-[16px] hover:bg-lh-blue-700 hover:text-lh-white ease-in duration-300;
+
+			& svg {
+				@apply fill-lh-blue-700 ease-in duration-300;
+			}
+
+			&:hover {
+				@apply gap-x-[20px];
+			}
+
+			&:hover svg {
+				@apply fill-lh-white;
+			}
+		}
+	}
+}
+/*-- global fill white button --*/
+.lh {
+	&_white {
+		&_fill {
+			&_btn {
+				@apply bg-lh-white rounded-full flex items-center gap-x-[9px] text-lh-blue-700 text-[16px] leading-[24px] px-[49px] py-[23px] font-bold ease-in duration-150;
+
+				svg {
+					@apply fill-lh-blue-700 ease-in duration-150;
+				}
+
+				&:hover {
+					@apply gap-x-[20px];
+				}
+			}
+		}
+	}
+}

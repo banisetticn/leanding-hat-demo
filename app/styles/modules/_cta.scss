@@ -1,0 +1,43 @@
+@use '../base';
+
+/*----====lh home & success section====----*/
+.lh {
+	&-c {
+		&__kickstart {
+			@apply bg-lh-blue-650 py-[56px];
+		}
+
+		&__kickstar-main {
+			@apply flex justify-center flex-wrap items-start lg:justify-between;
+		}
+
+		&__kickstar-heading {
+			@apply lg:w-[65%] sm:w-full;
+		}
+
+		&__kickstar-heading-text {
+			@apply text-lh-white font-semibold text-[32px] leading-normal lg:text-[40px] text-center lg:leading-tight lg:text-left sm:text-center pb-[35px] lg:pb-0;
+
+			& br {
+				@apply hidden lg:block;
+			}
+		}
+
+		&__kickstar-heading-text-span {
+			@apply lg:block sm:inline-block;
+		}
+
+		&__btn-white {
+			@apply flex items-center flex-col sm:w-full mt-0 lg:mt-[25px] lg:w-2/6 sm:mt-9;
+		}
+
+		&__getstarted {
+			@apply text-lh-white pt-4;
+		}
+
+		&__getstarted-link {
+			@apply underline font-semibold;
+		}
+	}
+}
+/*----====lh home & success section====----*/

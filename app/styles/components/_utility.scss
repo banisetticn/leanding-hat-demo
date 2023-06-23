@@ -1,0 +1,123 @@
+.row {
+  @apply flex flex-row;
+}
+/*----==global container width==----*/
+.container {
+  @apply mx-auto px-[15px] sm:w-[100%] lg:w-[95%] lg:px-[15px] xl:w-[1136px] xl:px-[0px] 2xl:w-[1300px];
+}
+.lh {
+  /*----==global bg image section==----*/
+  &_icon {
+    &_bg {
+      background: url('/assets/about-hero-banner.jpg') no-repeat;
+      background-size: cover;
+      background-position-y: 30px;
+    }
+  }
+
+  /*----==global bg image section y top==----*/
+  &_icon {
+    &_bg {
+      &_top {
+        background: url('/assets/about-hero-banner.jpg') no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  &_dark {
+    &_blue {
+      @apply bg-lh-dark-blue-900;
+    }
+  }
+  &_light {
+    &_blue500 {
+      @apply bg-lh-dark-blue-500;
+    }
+  }
+  /*----==global two column section top align==----*/
+  &_two {
+    &_column {
+      &_top {
+        &_align {
+          @apply w-full;
+
+          .container {
+            @apply flex flex-wrap lg:flex-nowrap;
+          }
+        }
+      }
+      &__content {
+        @apply w-full basis-full lg:max-w-[50%] lg:basis-[50%];
+      }
+      &_heading {
+        @apply pb-[20px] text-[26px] font-medium leading-[39px];
+        br {
+          @apply hidden 2xl:block;
+        }
+      }
+      &_para {
+        @apply text-[16px] leading-[24px] text-lh-black-light-400;
+      }
+
+      &__img {
+        @apply relative w-full basis-full lg:max-w-[50%] lg:basis-[50%];
+
+        img {
+          @apply mx-auto w-auto;
+        }
+      }
+      &_icon {
+        @apply absolute h-full w-full;
+      }
+      &_icon1 {
+        @apply absolute bottom-[12%] right-[12%] z-10 h-[105px] border-0 border-b-0 border-none object-cover sm:right-[25%] md:right-[28%] lg:right-[20%] 2xl:right-[25%];
+      }
+      &_icon2 {
+        @apply absolute right-0 top-[12%] z-10 h-[105px] w-full border-0 border-b-0 border-none object-cover sm:right-[13%] md:right-[19%] lg:right-[4%] xl:right-[10%] 2xl:right-[15%];
+      }
+      &_icon3 {
+        @apply absolute left-0 top-[12%] z-10 h-[105px] w-full border-0 border-b-0 border-none object-cover sm:left-[13%] md:left-[19%] lg:left-[4%] xl:left-[10%] 2xl:left-[15%];
+      }
+      &_icon4 {
+        @apply absolute bottom-0 right-0 z-10 h-[201px] w-full border-0 border-b-0 border-none object-cover sm:right-[13%] md:right-[19%] lg:right-[4%] xl:right-[10%] 2xl:right-[15%];
+      }
+      &_icon5 {
+        @apply absolute bottom-0 left-0 z-10 h-[180px] w-full border-0 border-b-0 border-none object-cover sm:left-[115px] md:h-[215px] lg:bottom-[55px] lg:left-0 xl:bottom-0;
+      }
+      &_icon6 {
+        @apply absolute right-[20px] top-[50px] z-10 h-[80px] w-full border-0 border-b-0 border-none object-cover sm:right-[19%] sm:top-[28px] md:right-[24%] lg:right-[10%] xl:right-[15%] 2xl:right-[20%];
+      }
+      &_icon7 {
+        @apply absolute bottom-0 right-0 z-10 h-[278px] w-full border-0 border-b-0 border-none object-cover;
+      }
+    }
+  }
+
+  /*----==global box shadow used on solution page==----*/
+  &_statement {
+    &_shadow {
+      box-shadow: 0px 17px 64px rgba(0, 30, 73, 0.34);
+    }
+  }
+  /*----==global box shadow used on solution page==----*/
+  &_shadow {
+    &_light {
+      box-shadow: 0px 17px 64px rgba(75, 177, 247, 0.24);
+    }
+
+    &_dark {
+      box-shadow: 0px 5px 40px rgba(7, 55, 126, 0.28);
+    }
+
+    &_medium {
+      box-shadow: 0px 54px 110px rgba(14, 176, 240, 0.17);
+    }
+  }
+
+  /*----==global right none==----*/
+  &_mr {
+    &_none {
+      @apply mr-0;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+/*----==lh banner check list row view with icon==----*/
+.lh_banner_check_list {
+  @apply mb-[36px] flex list-none flex-wrap gap-x-[21px] gap-y-[18px];
+
+  li {
+    @apply relative my-0 py-0 pl-[32px] text-[18px] leading-[27px] text-lh-black-light before:content-[''] after:content-[''];
+
+    &::before {
+      @apply absolute left-[5px] top-[50%] block h-[8px] w-[11px] translate-y-[-4px] object-cover;
+      background: url('/assets/Vector.svg') no-repeat;
+    }
+
+    &::after {
+      @apply absolute left-0 top-[50%] block h-[21px] w-[21px] translate-y-[-50%] rounded-full border-2 border-lh-blue-700 object-cover;
+    }
+  }
+}
+/*----==lh banner check list column view with icon==----*/
+.lh_check_list_col {
+  @apply flex list-none flex-col gap-y-[16px];
+
+  li {
+    @apply relative my-0 py-0 pl-[32px] text-[18px] leading-[27px] text-lh-black-light before:content-[''] after:content-[''];
+
+    &::before {
+      @apply absolute left-[5px] top-[50%] block h-[8px] w-[11px] translate-y-[-4px] object-cover;
+      background: url('/assets/Vector.svg') no-repeat;
+    }
+
+    &::after {
+      @apply absolute left-0 top-[50%] block h-[21px] w-[21px] translate-y-[-50%] rounded-full border-2 border-lh-blue-700 object-cover;
+    }
+  }
+}
+
+/*----==lh global contact form==----*/
+.form {
+  &_group {
+    @apply flex flex-wrap gap-x-[30px] gap-y-[35px];
+
+    .form_name_filed {
+      @apply h-[68px] w-full text-left lg:w-[50%] xl:w-[482px] 2xl:w-[50%];
+    }
+    .form_company_filed {
+      @apply h-[68px] w-full text-left lg:w-[46%] xl:w-[471px] 2xl:w-[47%];
+    }
+    .form_email_filed {
+      @apply h-[68px] w-full text-left lg:w-[50%] xl:w-[482px] 2xl:w-[50%];
+    }
+    .form_num_filed {
+      @apply h-[68px] w-full text-left lg:w-[46%] xl:w-[471px] 2xl:w-[47%];
+    }
+    .form_message_filed {
+      @apply w-full text-left;
+    }
+    label {
+      @apply relative left-[33px] top-[15px] z-10 bg-lh-white px-[10px] text-[15px] font-normal leading-[30px] text-lh-black-550;
+    }
+    .form_required {
+      @apply text-[15px] font-normal leading-[30px] text-lh-requred;
+    }
+    input[type='text'] {
+      @apply relative h-full w-full rounded-[5px] border border-solid border-lh-black-450 px-[35px] outline-none;
+    }
+    input[type='email'] {
+      @apply relative h-full w-full rounded-[5px] border border-solid border-lh-black-450 px-[35px] outline-none;
+    }
+    textarea {
+      @apply relative h-[181px] w-full rounded-[5px] border border-solid border-lh-black-450 px-[35px] outline-none;
+    }
+
+    .form_submit_btn_area {
+      @apply w-full;
+    }
+  }
+}
+
+/*----==lh global address list==----*/
+.lh {
+  &_address {
+    &_list {
+      @apply flex flex-col gap-y-[33px];
+
+      .lh_address_item {
+        @apply relative flex items-start gap-x-[14px];
+
+        p {
+          @apply text-[20px] font-normal leading-[30px] text-lh-black-light-400;
+          a {
+            @apply no-underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+/*-- global FAQ SVG icon --*/
+@mixin faqaccordion {
+  @apply mx-auto flex w-full cursor-pointer items-center justify-between border-b border-lh-border-bottom pb-[28px] pt-[30px] text-left text-[24px] font-semibold leading-[34px] text-lh-black-600 outline-none transition delay-150 ease-in-out lg:w-[752px];
+
+  &.last_accordion {
+    @apply border-none;
+  }
+
+  & svg {
+    @apply transition delay-150 ease-in-out;
+
+    & path {
+      @apply delay-150 ease-in-out;
+    }
+
+    & circle {
+      @apply delay-150 ease-in-out;
+    }
+  }
+
+  &:hover {
+    @apply text-lh-blue-700;
+  }
+
+  &:hover svg {
+    & path {
+      @apply fill-lh-blue-700;
+    }
+
+    & circle {
+      @apply stroke-lh-blue-700;
+    }
+  }
+  &.active svg {
+    @apply rotate-90;
+
+    & path {
+      @apply fill-lh-blue-700;
+    }
+    & circle {
+      @apply stroke-lh-blue-700;
+    }
+  }
+}
+
+/*-- blog catagories title --*/
+@mixin blog_catagories {
+  @apply flex pb-[27px] text-[12px] font-medium leading-[21px] text-lh-blue-600 lg:text-[14px];
+
+  & span {
+    @apply border-r-[1px] border-solid border-lh-border-right px-[9px] first:pl-0 last:border-0;
+  }
+}
+/*-- blog post title --*/
+@mixin blog_post_title {
+  @apply text-left text-[26px] font-medium leading-[34px] text-lh-black;
+}
+/*-- blog publish date --*/
+@mixin blog_publish_date {
+  @apply pt-[20px] text-[16px] font-semibold leading-[24px] text-lh-black-light-500;
+}
+
+/*-- blog select option --*/
+@mixin lh_blog_form_dropdown {
+  @apply rounded-[50px] border border-lh-blue-light px-[20px] py-[12px] text-[16px] font-medium leading-[24px] outline-none;
+  background: url('/assets/blog_dropdown_icon.svg');
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat, repeat;
+  background-position: right 20px top 50%, 0 0;
+  background-size: 15px auto, 100%;
+
+  & option {
+    background: lh-white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+/*-- blog searchbar --*/
+@mixin search_bar {
+  @apply relative flex w-full;
+
+  & #mySearch {
+    @apply relative h-[50px] min-w-full rounded-[50px] border border-lh-blue-light px-[30px] py-[22px] outline-none;
+    @include blog-search-shadow;
+
+    &::placeholder {
+      @apply text-[14px] font-normal italic text-lh-blue-500;
+    }
+  }
+
+  & .lh_blog_search_btn {
+    & .lh_blog_search_icon {
+      @apply absolute right-[30px] top-[15px] h-[19px] w-[19px];
+    }
+  }
+}
+
+@mixin blog-search-shadow {
+  box-shadow: 0px 4px 25px rgba(20, 107, 255, 0.1);
+}
+
+@mixin lh_solution_setup_shadow {
+  box-shadow: 0px 17px 64px rgba(75, 177, 247, 0.24);
+}
+
+/*-- blog pagination prev & next btn --*/
+@mixin pagination_prev_next_btn {
+  @apply relative flex h-[69px] min-w-[69px] cursor-pointer items-center justify-center rounded-[50px] border border-lh-blue-700 transition delay-150 ease-in-out before:absolute before:bottom-[50%] before:left-[50%] before:h-[69px] before:w-[69px] before:translate-x-[-50%] before:translate-y-[50%] before:rounded-[50px] before:border before:border-lh-blue-700 before:content-[''];
+
+  & svg {
+    @apply fill-lh-blue-700;
+  }
+
+  &:hover svg {
+    @apply fill-lh-white;
+  }
+}
+
+/*-- blog pagination num --*/
+@mixin pagination_num {
+  @apply relative flex h-[45px] w-[45px] items-center justify-center rounded-[50px] text-[16px] font-normal text-lh-blue-700 transition delay-150 ease-in-out;
+
+  &:hover {
+    @apply rounded-[50px] bg-lh-blue-700 text-lh-white;
+  }
+
+  &.active_num {
+    @apply rounded-[50px] bg-lh-blue-700 text-lh-white;
+  }
+}
+
+/*-- blog info parent slug mark --*/
+@mixin parent_mark_slug {
+  @apply text-[13px] font-medium leading-[20px] text-lh-blue-700;
+}

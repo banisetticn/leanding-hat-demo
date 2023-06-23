@@ -1,0 +1,96 @@
+@use '../base';
+
+.lh {
+	&-c {
+		&__footer {
+			@apply bg-lh-blue-dark pt-[90px];
+		}
+
+		&__footer-main {
+			@apply flex justify-start flex-col sm:flex-row flex-wrap lg:flex-nowrap gap-x-[154px];
+		}
+
+		&__footer-brand {
+			@apply w-full lg:w-[30%] mt-1;
+		}
+		&__footer-nav-list {
+			@apply flex gap-x-[32px] md:gap-x-[87px] flex-wrap;
+		}
+
+		&__footer-item {
+			@apply w-auto mt-8 md:mt-0;
+		}
+
+		&__footer-item-heading {
+			@apply mb-[30px] text-base font-bold text-lh-blue-500;
+		}
+
+		&__footer-item-list {
+			@apply list-none;
+		}
+
+		&__footer-item-list-item {
+			@apply mb-[30px] last:mb-0;
+		}
+
+		&__footer-list-item-link {
+			@apply text-lh-white text-base font-light hover:underline;
+		}
+
+		&__newsletter-input {
+			@apply placeholder:text-lh-white w-full border-lh-white border px-[19px] py-[13px] rounded-[7px] focus:outline-none focus:ring-0;
+		}
+
+		&__newsletter-btn {
+			@apply bg-lh-blue-700 px-5 rounded-md flex border-2 border-none justify-center items-center hover:bg-none hover:border-2 hover:to-lh-blue-600;
+		}
+
+		&__newsletter {
+			@apply flex justify-start gap-3;
+		}
+
+		&__subscribe-text {
+			@apply text-lh-white text-[16px] leading-[24px] font-light pt-[28px] pb-[12px];
+		}
+
+		&__footer-social {
+			@apply flex justify-start pt-7 pb-[35px] lg:pb-0 items-center flex-wrap;
+		}
+
+		&__footer-social-text {
+			@apply text-lh-white text-[16px] font-light;
+		}
+
+		&__footer-social-icon {
+			@apply w-8 h-8 text-center py-1 ml-2 flex justify-center items-center hover:animate-bounce;
+		}
+
+		&__copyrights {
+			@apply mt-[60px] border-t-2 border-lh-blue-200 pt-[42px] pb-[29px];
+		}
+
+		&__copyrights-text {
+			@apply text-lh-white font-light leading-normal lg:w-auto lg:pb-0 sm:w-full sm:pb-6 text-center;
+		}
+
+		&__copyrights-menu {
+			@apply text-lh-white font-normal flex flex-wrap gap-y-[15px] gap-x-[16px] lg:block sm:text-center;
+		}
+
+		&__copyrights-menu-link {
+			@apply px-0 lg:px-4 hover:underline font-light leading-3 inline-block;
+		}
+	}
+}
+
+.lh-c__copyrights {
+	border-top: 1px solid #4c76b5;
+}
+
+.lh-c__newsletter-input {
+	background: transparent;
+
+	&::placeholder {
+		@apply text-[14px] font-light;
+	}
+}

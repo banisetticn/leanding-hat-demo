@@ -1,0 +1,33 @@
+.lh {
+	&_asidebar {
+		@apply rounded-[10px] mt-[33px] bg-lh-blue-200 border border-solid border-lh-blue-300 p-[30px];
+
+		&_title {
+			@apply text-[20px] leading-[35px] font-semibold text-lh-black pb-[20px];
+		}
+
+		&_cat_list {
+			@apply w-full list-none;
+
+			&_item {
+				@apply py-[22px] flex justify-between items-center border border-solid border-b-lh-blog-info-cat border-t-0 border-l-0 border-r-0 outline-none last:border-none last:pb-0 cursor-pointer transition duration-300 ease-out;
+
+				&_para {
+					@apply text-[16px] text-lh-black-400 font-normal transition duration-300 ease-out;
+				}
+
+				&:hover p {
+					@apply text-lh-blue-700;
+				}
+
+				&:hover img {
+					@apply rotate-90;
+				}
+
+				img {
+					@apply transition duration-300 ease-out;
+				}
+			}
+		}
+	}
+}

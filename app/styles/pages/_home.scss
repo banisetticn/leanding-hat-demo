@@ -1,0 +1,115 @@
+@use '../base';
+
+.lh {
+  /*----====lh banner section====----*/
+  &_hero {
+    &_banner {
+      @apply mb-[88px] mt-[70px] w-full overflow-hidden;
+
+      .container {
+        @apply flex flex-wrap justify-between gap-x-[76px] lg:flex-nowrap xl:w-[1200px] xl:flex-nowrap;
+      }
+
+      &__content_area {
+        @apply text-lh-blue-800 sm:order-2 sm:basis-full lg:order-1 lg:basis-full xl:basis-1/2;
+      }
+      .lh_banner_heading {
+        @apply pb-[37px] text-[32px] font-medium leading-normal lg:text-[50px] lg:leading-[60px];
+      }
+      .lh_banner_btn_group {
+        @apply flex w-full flex-wrap gap-x-[14px] gap-y-[20px];
+
+        &__btn {
+          @apply leading-[24px];
+        }
+      }
+
+      &__image {
+        @apply order-1 mt-[30px] sm:basis-full lg:order-2 lg:mt-0 xl:basis-1/2;
+
+        & img {
+          @apply w-full object-cover;
+        }
+      }
+    }
+  }
+
+  /*----====lh slient logo section====----*/
+  &_client {
+    &_logo {
+      &_section {
+        @apply mb-[90px] h-auto w-full;
+
+        &__heading {
+          @apply pb-[49px] text-center text-[26px] font-medium leading-[39px] text-lh-black-400;
+        }
+
+        &__area {
+          @apply mx-auto flex w-full flex-wrap justify-start gap-x-[20px] gap-y-[50px] lg:items-center lg:justify-center lg:gap-x-[68px] lg:gap-y-[50px];
+
+          &__data {
+            @apply basis-[47%] sm:basis-[30%] lg:basis-1/5;
+
+            img {
+              @apply object-cover grayscale;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*----====lh how work section====----*/
+  &_how {
+    &_work {
+      &_section {
+        @apply mt-[90px] w-full;
+
+        &__heading_area {
+          @apply w-full;
+        }
+        .lh_how_work_heading {
+          @apply pb-[22px] text-center text-[30px] font-medium leading-normal text-lh-blue-800 lg:text-[40px] lg:leading-[60px];
+        }
+        .lh_how_work_para {
+          @apply pb-[22px] text-center text-[20px] font-normal leading-[28px] text-lh-black-light-400;
+
+          br {
+            @apply hidden lg:block;
+          }
+        }
+
+        .lh_how_work_btn {
+          @apply mx-auto mt-[88px] w-fit px-[56px] py-[23px] leading-[24px];
+        }
+        &__img {
+          @apply w-full object-cover;
+        }
+      }
+    }
+  }
+
+  /*----====lh solution section====----*/
+  &-c {
+    &__solutions {
+      @apply bg-endless-solutions-bg overflow-hidden bg-cover bg-no-repeat pb-[100px] pt-[92px];
+
+      .container {
+        & .lh-u-common-heading {
+          @apply w-full;
+          & h2 {
+            @apply pb-[22px] text-center text-[30px] font-medium leading-normal text-lh-blue-800 lg:text-[40px] lg:leading-[60px];
+          }
+
+          & p {
+            @apply pb-[22px] text-center text-[20px] font-normal leading-[28px] text-lh-black-light-400;
+          }
+        }
+
+        & .lh_solution_btn {
+          @apply mx-auto mt-[90px] w-fit px-[45px] py-[23px] leading-[24px];
+        }
+      }
+    }
+  }
+}

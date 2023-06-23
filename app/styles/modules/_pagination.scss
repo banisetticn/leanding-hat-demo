@@ -1,0 +1,59 @@
+@use '../base';
+/*----==pagination section with prev & next button==----*/
+.lh {
+	&_pagination_section {
+		@apply w-full pt-[40px] pb-[150px] sm:pt-[20px] sm:pb-[90px];
+
+		&__area {
+			@apply mx-auto;
+
+			.lh_pagination {
+				@apply w-full md:w-[80%] lg:w-[454px] mx-auto flex items-center justify-between gap-x-[15px] flex-wrap sm:flex-nowrap lg:gap-x-[30px] relative;
+
+				.lh_pagination_number {
+					@apply w-full sm:w-full mx-auto flex items-center justify-between gap-x-[15px] lg:gap-x-[10px];
+				}
+
+				.pagination_num {
+					@include base.pagination_num;
+				}
+
+				.lh_pagination_prev {
+					@include base.pagination_prev_next_btn;
+					@apply absolute top-[65px] left-[25%] sm:relative sm:top-0 sm:left-0;
+
+					&:hover {
+						@apply bg-lh-blue-700;
+					}
+				}
+
+				.lh_pagination_next {
+					@include base.pagination_prev_next_btn;
+					@apply absolute top-[65px] right-[25%] sm:relative sm:top-0 sm:right-0;
+
+					&:hover {
+						@apply bg-lh-blue-700;
+					}
+				}
+			}
+		}
+	}
+}
+/*----==prev & next arrow button==----*/
+.lh {
+	&_arrow {
+		&_prev {
+			@include base.pagination_prev_next_btn;
+			@apply relative sm:top-0 sm:left-0 min-w-[54px] h-[54px] before:w-[54px] before:h-[54px] hover:bg-lh-blue-700;
+		}
+	}
+}
+
+.lh {
+	&_arrow {
+		&_next {
+			@include base.pagination_prev_next_btn;
+			@apply relative sm:top-0 sm:right-0 min-w-[54px] h-[54px] before:w-[54px] before:h-[54px] hover:bg-lh-blue-700;
+		}
+	}
+}

@@ -1,0 +1,196 @@
+@use '../base';
+
+.lh {
+  /*----====lh about hero section====----*/
+  &_about {
+    &_hero {
+      @apply relative w-full overflow-hidden pb-[90px] pt-[90px];
+      background: url('/assets/about-hero-banner.jpg') no-repeat;
+      background-size: cover;
+      background-position-y: 30px;
+      &.lh_bg_none {
+        @apply bg-none;
+      }
+
+      &__text_area {
+        @apply w-full overflow-hidden lg:w-[67%];
+      }
+      .lh_about_hero_heading {
+        @apply pb-[10px] text-[32px] font-medium leading-normal text-lh-black lg:text-[50px] lg:leading-[75px];
+      }
+      .lh_about_hero_para {
+        @apply text-[20px] font-normal leading-[30px] text-lh-black-light;
+      }
+      &__img_area {
+        @apply mt-[70px] flex w-full flex-wrap items-start justify-between lg:flex-nowrap;
+
+        &.gap_top_none {
+          @apply mt-0;
+        }
+
+        img {
+          @apply w-full sm:w-[45%] lg:w-[45%] xl:w-auto;
+
+          &.mob_mb_gap {
+            @apply pb-[30px] lg:pb-0;
+          }
+        }
+      }
+
+      .lh_what_we_do {
+        @apply mt-[90px] flex w-full flex-wrap items-start;
+
+        &__heading {
+          @apply mb-[30px] w-full lg:mb-[0] lg:w-[30%];
+
+          h3 {
+            @apply text-left text-[40px] font-medium leading-[60px] text-lh-black;
+          }
+        }
+
+        &__content {
+          @apply w-full lg:w-[70%];
+
+          p {
+            @apply text-[25px] font-normal leading-[37px] text-lh-black;
+          }
+
+          .lh_about_team__btn {
+            @apply mt-[50px] flex w-fit items-center gap-x-[9px] rounded-[50px] bg-lh-blue-700 px-[45px] py-[18px] text-[16px] font-bold text-lh-white duration-300 ease-in;
+
+            &:hover {
+              @apply gap-[20px];
+            }
+
+            svg {
+              @apply fill-lh-white duration-300 ease-in;
+            }
+          }
+        }
+
+        .lh_what_we_do_sub_content {
+          @apply mt-[30px] flex w-full flex-wrap gap-x-[30px] gap-y-[35px] sm:flex-nowrap lg:flex-nowrap lg:gap-x-[60px];
+
+          .lh_what_we_do_inner {
+            @apply w-full sm:w-3/6;
+            &__para {
+              @apply text-[16px] font-normal leading-[24px] text-lh-black-light;
+            }
+          }
+        }
+      }
+
+      .lh_about_btn {
+        @apply mt-[50px] w-fit leading-[24px];
+      }
+      .lh_about_team__btn {
+        @apply mt-[50px] w-fit leading-[24px];
+      }
+    }
+  }
+
+  /*----====lh core value section====----*/
+  &_core {
+    &_value {
+      &_section {
+        @apply mb-[80px] mt-[90px] w-full overflow-hidden;
+
+        .core_value_heading_area {
+          @apply w-full lg:w-9/12;
+        }
+        .core_value_heading {
+          @apply pb-[12px] text-left text-[20px] font-medium leading-normal lg:text-[40px] lg:leading-[60px];
+        }
+        .core_value_para {
+          @apply text-[20px] leading-[30px] text-lh-black-light;
+        }
+      }
+    }
+  }
+
+  /*----====lh about gallery section====----*/
+  &_about {
+    &_gallery {
+      &_block {
+        @apply max-w-full overflow-hidden;
+
+        img {
+          @apply h-auto w-full overflow-hidden object-cover lg:h-[637px];
+        }
+      }
+    }
+  }
+
+  /*----====lh about speach section====----*/
+  &_about {
+    &_co {
+      &_spaech {
+        @apply mb-[90px] mt-[90px] w-full overflow-hidden;
+
+        .lh_about_co_spaech_content {
+          @apply text-center;
+
+          &__info {
+            @apply text-[20px] font-medium leading-normal text-lh-black-100 lg:text-[33px] lg:leading-[50px];
+
+            br {
+              @apply hidden lg:block;
+            }
+          }
+          &__author {
+            @apply pt-[50px] text-[20px] font-normal uppercase leading-[30px] text-lh-black;
+          }
+        }
+      }
+    }
+  }
+
+  /*----====lh about team section====----*/
+  &_about {
+    &_team {
+      @apply relative w-full pb-[90px] pt-[79px] before:absolute before:left-[50%] before:top-0 before:mx-auto before:block before:w-9/12 before:translate-x-[-50%] before:border before:border-t-lh-border-top before:opacity-40 before:content-[''];
+
+      .lh_about_team_title_area {
+        @apply w-full;
+      }
+      .lh_about_team_heading {
+        @apply pb-[16px] text-center text-[30px] font-medium leading-normal text-lh-black lg:text-[40px] lg:leading-[60px];
+      }
+      .lh_about_team_para {
+        @apply text-center text-[20px] font-normal leading-[30px] text-lh-black-light;
+        br {
+          @apply hidden lg:block;
+        }
+      }
+
+      .lh_team_slider {
+        @apply relative mx-auto mt-[123px] h-auto w-full overflow-hidden;
+      }
+      .slide-track {
+        @apply flex flex-wrap justify-start gap-x-0 gap-y-[26px] sm:justify-between md:justify-start lg:justify-center lg:gap-x-[190px];
+      }
+      .slide {
+        @apply flex h-auto w-full flex-col text-center sm:w-[250px];
+
+        img {
+          @apply h-auto w-full;
+        }
+      }
+      .lh_team_author {
+        @apply text-center text-[20px] font-semibold leading-[30px] text-lh-black;
+      }
+      .lh_team_author_post {
+        @apply text-[16px] font-normal leading-[30px] text-lh-black;
+      }
+    }
+  }
+
+  /*----====about gredient preset====----*/
+  &_bg {
+    &_b {
+      &_gradient {
+        background: linear-gradient(180deg, #ffffff 0%, #e5f8ff 100.56%);
+      }
+    }
+  }
+}

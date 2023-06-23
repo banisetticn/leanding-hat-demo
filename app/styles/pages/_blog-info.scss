@@ -1,0 +1,156 @@
+@use '../base';
+/*----====lh blog info section====----*/
+.lh_blog_info_banner {
+	@apply w-full mt-[70px] mb-[90px] overflow-hidden;
+	&__inner {
+		@apply w-full;
+		&__nesting_slug {
+			.parent_slug_mark {
+				@include base.parent_mark_slug;
+			}
+		}
+
+		&__heading {
+			@apply text-center text-[30px] leading-normal text-lh-black py-[35px] lg:py-[55px] lg:text-[50px] lg:leading-[60px] font-medium;
+			& br {
+				@apply hidden sm:block;
+			}
+		}
+
+		&__cat_date {
+			@apply text-[16px] leading-[24px] pb-[36px] uppercase font-semibold text-center text-lh-black-light-500;
+
+			.parent_slug_mark {
+				@include base.parent_mark_slug;
+				@apply text-[16px] pr-[6px] leading-[24px] uppercase font-semibold border-r border-solid border-r-lh-black-light-500;
+			}
+		}
+
+		.lh_blog_info_banner_img {
+			@apply w-full mx-auto object-cover rounded-[10px];
+		}
+	}
+}
+/*----====lh blog info section====----*/
+/*----====lh blog details section====----*/
+.lh_blog_info_details_banner {
+	@apply w-full;
+
+	.container {
+		@apply flex items-start justify-between flex-wrap gap-x-[2%] lg:gap-x-[60px];
+	}
+
+	.lh_blog_info_details_left_area {
+		@apply order-2 max-w-full lg:order-1 lg:basis-[63%] lg:max-w-[63%];
+
+		&__p {
+			@apply text-[18px] leading-[27px] text-lh-blog-info-para;
+		}
+
+		&__heading {
+			@apply text-[22px] md:text-[30px] leading-normal lg:text-[40px] lg:leading-[60px] text-lh-black pt-[40px] pb-[20px];
+		}
+
+		&__sub_heading {
+			@apply text-[22px] leading-normal md:text-[30px] md:leading-[45px] text-lh-black pt-[30px] pb-[10px];
+		}
+
+		&__img {
+			@apply w-full object-cover my-[30px];
+		}
+
+		&__social {
+			@apply flex items-center gap-x-[13px] mt-[70px];
+
+			&__para {
+				@apply text-[20px] text-lh-blog-info-para font-normal;
+			}
+
+			& .lh_blog_info_left_social_list {
+				@apply flex gap-x-[20px];
+
+				& li {
+					@apply cursor-pointer transition duration-300 ease-out hover:animate-bounce;
+				}
+			}
+		}
+	}
+
+	.lh_blog_info_details_right_catagories_area {
+		@apply w-full order-1 lg:order-2 mb-[30px] lg:mb-0 lg:basis-[30%] lg:max-w-[30%];
+
+		.lh_blog_search_area {
+			@include base.search_bar;
+		}
+		.lh_blog_info_details_right_subscribe {
+			@apply w-full py-[30px] pl-[35px] pr-[27px] bg-lh-white border border-solid border-lh-blue-300 rounded-[7px] mt-[37px];
+			@include base.blog-search-shadow;
+
+			&__heading {
+				@apply text-[20px] font-semibold text-lh-black pb-[20px];
+			}
+
+			&__para {
+				@apply text-[16px] leading-[24px] font-normal text-lh-black pb-[28px];
+			}
+
+			&__form {
+				@apply w-full flex items-start justify-between gap-x-[18px];
+
+				.lh_blog_info_subscribe_mail {
+					@apply w-full h-[60px] border border-solid border-lh-blog-subscribe-border outline-none py-[20px] px-[20px] rounded-[7px] placeholder:text-lh-blog-subscribe-mail placeholder:text-[13px];
+				}
+
+				.lh_blog_info_subscribe_form_submit {
+					@apply bg-lh-blue-700 rounded-[7px] w-[68px] h-[60px] px-[20px] py-[18px];
+
+					img {
+						@apply w-[30px];
+					}
+				}
+			}
+		}
+	}
+}
+/*----====lh blog details section====----*/
+/*----====lh blog article section====----*/
+.lh_blog_info_article_section {
+	@apply w-full pt-[112px] pb-[90px];
+
+	.container {
+		@apply flex;
+	}
+
+	.lh_blog_info_article_slider_wrapper {
+		@apply w-full relative;
+
+		.lh_blog_info_article_heading_area {
+			@apply flex items-center justify-between flex-wrap;
+
+			.lh_blog_info_article_heading {
+				@apply text-[30px] leading-normal lg:text-[40px] lg:leading-[60px] text-lh-black font-semibold;
+			}
+
+			.lh_blog_info_article_slider_btns {
+				@apply w-full flex gap-x-[15px] p-[40px] pl-0 pb-0 lg:p-0 relative lg:w-fit;
+
+				.lh_pagination_prev {
+					@apply relative top-0 left-0;
+				}
+
+				.lh_pagination_next {
+					@apply relative top-0 right-0;
+				}
+			}
+		}
+
+		.lh_blog_info_article_slider {
+			@apply flex flex-wrap lg:flex-nowrap gap-x-[22px] gap-y-[22px] pt-[60px];
+
+			&__list {
+				@apply w-full md:w-[48%] lg:w-auto mt-0;
+			}
+		}
+	}
+}
+/*----====lh blog article section====----*/

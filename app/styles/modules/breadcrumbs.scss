@@ -1,0 +1,10 @@
+/*----==lh breadcrumbs text==----*/
+.lh {
+	&_breadcrumbs {
+		@apply text-[13px] leading-[20px] font-normal text-lh-blog-nesting-slug;
+
+		&_links {
+			@apply text-[13px] leading-[20px] font-medium text-lh-blue-700;
+		}
+	}
+}

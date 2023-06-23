@@ -1,0 +1,37 @@
+@use '../base';
+
+.lh_faq_section {
+	@apply w-full mt-[90px] mb-[90px] overflow-hidden;
+
+	.lh_faq_heading_area {
+		.lh_faq_heading {
+			@apply text-[28px] leading-normal pb-[77px] lg:text-[40px] lg:leading-[55px] text-lh-blue-800 font-medium text-center;
+		}
+	}
+
+	.accordion {
+		@include base.faqaccordion;
+	}
+
+	.panel {
+		@apply w-full lg:w-[752px] mx-auto pr-[15px] bg-lh-white max-h-0 overflow-hidden;
+		transition: max-height 0.2s ease-out;
+
+		p {
+			@apply leading-[30px];
+		}
+	}
+
+	.lh_faq_btn {
+		@apply w-fit mx-auto px-[43px] leading-[24px] py-[23px] mt-[134px];
+
+		&:hover {
+			@apply gap-x-[25px];
+		}
+
+		svg {
+			@apply fill-lh-white ease-in duration-300;
+		}
+	}
+}
+/*----====lh faq section====----*/

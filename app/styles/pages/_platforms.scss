@@ -1,0 +1,161 @@
+.lh{
+    /*----====platform banner setion====----*/
+    &_platform{
+        &_banner{
+            @apply w-full bg-lh-dark-blue-900 pt-[50px] pb-[50px] lg:pb-0 lg:pt-[46px] relative overflow-hidden;
+
+            .container{
+                @apply flex items-center flex-wrap gap-x-[62px] lg:flex-nowrap;
+            }
+            &__content_area{
+                @apply basis-full max-w-full lg:basis-[45%] lg:max-w-[45%] pr-[2%] order-2 lg:order-1 z-20 mt-[40px] lg:mt-0;
+            }
+
+            &__heading{
+                @apply text-[50px] leading-[75px] font-medium text-lh-white;
+            }
+            &__sub_heading{
+                @apply text-[26px] leading-[39px] font-medium text-lh-dark-blue-800;
+            }
+            &__para{
+                @apply text-[16px] leading-[24px] text-lh-white font-light pt-[11px];
+            }
+
+            &__img{
+                @apply basis-full max-w-full lg:basis-[55%] lg:max-w-[55%] overflow-hidden order-1 lg:order-2;
+
+                img{
+                    @apply w-full z-10 object-cover relative;
+                }
+            }
+            .platform_banner_icon{
+                @apply absolute bottom-0 overflow-hidden;
+
+                img{
+                    @apply h-[455px] object-cover;
+                }
+            }
+        }
+    }
+/*----====platform key hightlight setion====----*/
+    &_key{
+        &_hightlight{
+            @apply w-full py-[90px] overflow-hidden;
+
+            &__heading{
+                @apply text-[30px] leading-normal lg:text-[40px] lg:leading-[60px] font-semibold text-lh-black text-center pb-[13px];
+            }
+
+            &__para{
+                @apply text-[16px] leading-[30px] font-normal text-lh-black text-center;
+                br{
+                    @apply hidden lg:block;
+                }
+            }
+
+            &__img{
+                @apply mt-[75px] rounded-[26px] w-full object-cover;
+            }
+        }
+    }
+/*----====platform Ai driven setion====----*/
+    &_platform{
+        &_ai{
+            &_driven{
+                &_section{
+                    @apply py-[88px] overflow-hidden;
+                    
+                    .container{
+                        @apply gap-x-[115px];
+                    }
+                    .ai_driven_content{
+                        @apply order-2 lg:order-1 mt-[40px] lg:mt-0;
+                    }
+                    .ai_driven_heading{
+                        @apply text-lh-black-light-400;
+                    }
+                    .ai_driven_para{
+                        @apply text-lh-black-light-400;
+                    }
+                    .ai_driven_img{
+                        @apply order-1 lg:order-2;
+                    }
+            
+                    .platform_ai_driven_img{
+                        @apply border border-t-0 border-l-0 border-r-0 border-solid border-b-lh-dark-blue-600;
+                    }
+                }
+            }
+        }
+    }
+/*----====platform Loan Origination & Management setion====----*/
+    &_loan{
+        &_origination{
+            &_management{
+                &_section{
+                    @apply py-[90px] overflow-hidden;
+
+                    .container{
+                        @apply gap-x-[153px];
+                    }
+                    .loan_origination_m_content{
+                        @apply mt-[40px] lg:mt-0;
+                    }
+                    .loan_origination_management_heading{
+                        @apply text-lh-white;
+                    }
+                    .loan_origination_management_para{
+                        @apply text-lh-white;
+                    }
+
+                    .loan_origination_management_report_img{
+                        @apply h-[353px] object-cover;
+                    }
+                }
+            }
+        }
+    }
+/*----====platform Data-driven Loan Management section====----*/
+    &_data{
+        &_driven{
+            &_loan{
+                &_management{
+                    &_setion{
+                        @apply w-full pt-[90px] pb-[81px] overflow-hidden;
+
+                        .container{
+                            @apply gap-x-[117px];
+                        }
+                        .data_driven_loan_m_content{
+                            @apply order-2 lg:order-1 mt-[40px] lg:mt-0;
+                        }
+
+                        .data_driven_loan_m_img{
+                            @apply order-1 lg:order-2;
+                        }
+                        .data-driven_loan_management_img{
+                            @apply w-full h-[374px] object-contain border border-t-0 border-l-0 border-r-0 border-solid border-b-lh-dark-blue-550;
+                        }
+                    }
+                }
+            }
+        }
+    }
+/*----====platform digital revolution section====----*/
+    &_digital{
+        &_revolution{
+            @apply w-full py-[90px] overflow-hidden;
+
+            .container{
+                @apply gap-x-[120px];
+            }
+            .digital_revolution_content{
+                @apply mt-[40px] lg:mt-0;
+            }
+
+            .digital_revolution_img{
+                @apply h-[427px] object-contain;
+            }
+        }
+    }
+}
